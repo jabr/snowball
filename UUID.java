@@ -26,7 +26,7 @@ public final class UUID {
         if (time == lastTime) {
             if (sequenceCounter == 256) {
                 // rather than block, we'll cheat and return a UUID from the very near future.
-                lastTime = time++;
+                lastTime = ++time;
                 sequenceCounter = 0;
             } else {
                 sequenceCounter++;
